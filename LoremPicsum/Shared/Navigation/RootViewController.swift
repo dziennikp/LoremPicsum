@@ -20,5 +20,6 @@ class RootViewController: UINavigationController {
     }
 
     func showDetails(for image: Image) {
+        pushViewController(ImageDetailsViewController(viewModel: image), animated: true)
     }
 }
