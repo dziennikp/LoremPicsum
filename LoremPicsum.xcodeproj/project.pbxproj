@@ -11,9 +11,10 @@
 		7DF10D6827986E7E001EFB76 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF10D6727986E7E001EFB76 /* SceneDelegate.swift */; };
 		7DF10D6F27986E81001EFB76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DF10D6E27986E81001EFB76 /* Assets.xcassets */; };
 		7DF10D7227986E81001EFB76 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DF10D7027986E81001EFB76 /* LaunchScreen.storyboard */; };
-		7DF10D7D27986E81001EFB76 /* LoremPicsumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF10D7C27986E81001EFB76 /* LoremPicsumTests.swift */; };
-		7DF10D8727986E81001EFB76 /* LoremPicsumUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF10D8627986E81001EFB76 /* LoremPicsumUITests.swift */; };
-		7DF10D8927986E81001EFB76 /* LoremPicsumUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF10D8827986E81001EFB76 /* LoremPicsumUITestsLaunchTests.swift */; };
+		7DF10DAA27993CD2001EFB76 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF10DA927993CD2001EFB76 /* APIClient.swift */; };
+		7DF10DAC27993FD1001EFB76 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF10DAB27993FD1001EFB76 /* APIError.swift */; };
+		7DF10DB227994703001EFB76 /* URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF10DB127994703001EFB76 /* URLSessionProtocol.swift */; };
+		7DF10DB527994C40001EFB76 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF10DB427994C40001EFB76 /* RootViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,10 +35,10 @@
 		7DF10D7127986E81001EFB76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7DF10D7327986E81001EFB76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7DF10D7827986E81001EFB76 /* LoremPicsumTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoremPicsumTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7DF10D7C27986E81001EFB76 /* LoremPicsumTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoremPicsumTests.swift; sourceTree = "<group>"; };
-		7DF10D8227986E81001EFB76 /* LoremPicsumUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoremPicsumUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7DF10D8627986E81001EFB76 /* LoremPicsumUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoremPicsumUITests.swift; sourceTree = "<group>"; };
-		7DF10D8827986E81001EFB76 /* LoremPicsumUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoremPicsumUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7DF10DA927993CD2001EFB76 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		7DF10DAB27993FD1001EFB76 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		7DF10DB127994703001EFB76 /* URLSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionProtocol.swift; sourceTree = "<group>"; };
+		7DF10DB427994C40001EFB76 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +89,8 @@
 		7DF10D6427986E7E001EFB76 /* LoremPicsum */ = {
 			isa = PBXGroup;
 			children = (
+				7DF10D9927993C22001EFB76 /* Shared */,
+				7DF10D962798740B001EFB76 /* Generated */,
 				7DF10D6527986E7E001EFB76 /* AppDelegate.swift */,
 				7DF10D6727986E7E001EFB76 /* SceneDelegate.swift */,
 				7DF10D6E27986E81001EFB76 /* Assets.xcassets */,
