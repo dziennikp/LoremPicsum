@@ -17,7 +17,8 @@ class ImageDetailsViewController: UIViewController {
         view.backgroundColor = .white
     }
 
-    required init?(coder: NSCoder) {
+    @available(*, unavailable)
+    required init?(coder _: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
@@ -34,7 +35,7 @@ class ImageDetailsViewController: UIViewController {
             imageView.topAnchor.constraint(equalTo: authorLabel.bottomAnchor, constant: 32),
             imageView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 16),
             imageView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -16),
-            imageView.bottomAnchor.constraint(equalTo:  view.safeAreaLayoutGuide.bottomAnchor, constant: -16)
+            imageView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -16),
         ]
         constraints.forEach { $0.isActive = true }
 
@@ -53,15 +54,15 @@ class ImageDetailsViewController: UIViewController {
 }
 
 extension ImageDetailsViewController: UIActivityItemSource {
-    func activityViewControllerPlaceholderItem(_ activityViewController: UIActivityViewController) -> Any {
+    func activityViewControllerPlaceholderItem(_: UIActivityViewController) -> Any {
         viewModel
     }
 
-    func activityViewController(_ activityViewController: UIActivityViewController, itemForActivityType activityType: UIActivity.ActivityType?) -> Any? {
+    func activityViewController(_: UIActivityViewController, itemForActivityType _: UIActivity.ActivityType?) -> Any? {
         viewModel
     }
 
-    func activityViewController(_ activityViewController: UIActivityViewController, thumbnailImageForActivityType activityType: UIActivity.ActivityType?, suggestedSize size: CGSize) -> UIImage? {
+    func activityViewController(_: UIActivityViewController, thumbnailImageForActivityType _: UIActivity.ActivityType?, suggestedSize _: CGSize) -> UIImage? {
         imageView.image
     }
 }

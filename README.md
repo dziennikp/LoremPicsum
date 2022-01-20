@@ -33,5 +33,4 @@ View is decoupled from ViewModel so we can easily switch between View frameworks
 * Setup Fastlane
 * Improve LaunchScreen
 * Improve caching
-* Restore Swiftformat
   

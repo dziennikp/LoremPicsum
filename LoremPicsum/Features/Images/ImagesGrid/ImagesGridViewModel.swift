@@ -54,6 +54,7 @@ class ImagesGridViewModel {
 }
 
 // MARK: State
+
 extension ImagesGridViewModel {
     enum State {
         case loading

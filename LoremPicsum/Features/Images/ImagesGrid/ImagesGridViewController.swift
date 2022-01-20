@@ -1,5 +1,5 @@
-import UIKit
 import Combine
+import UIKit
 
 class ImagesGridViewController: UIViewController {
     private lazy var collectionView = makeCollectionView()
@@ -17,7 +17,8 @@ class ImagesGridViewController: UIViewController {
         view.backgroundColor = .white
     }
 
-    required init?(coder: NSCoder) {
+    @available(*, unavailable)
+    required init?(coder _: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
@@ -88,7 +89,7 @@ class ImagesGridViewController: UIViewController {
     }
 
     private func collectionViewLayout() -> UICollectionViewCompositionalLayout {
-        UICollectionViewCompositionalLayout { sectionIndex, environment in
+        UICollectionViewCompositionalLayout { _, environment in
             let columnsCount = self.numberOfColumns(for: environment.container.contentSize.width)
             let heightFactor = 1 / CGFloat(columnsCount)
             let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
@@ -116,7 +117,6 @@ class ImagesGridViewController: UIViewController {
 
             self?.viewModel.handleAction(.loadMore(indexPath.row))
             return cell
-
         }
     }
 
@@ -131,9 +131,8 @@ class ImagesGridViewController: UIViewController {
     }
 }
 
-extension ImagesGridViewController: UICollectionViewDelegate  {
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+extension ImagesGridViewController: UICollectionViewDelegate {
+    func collectionView(_: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         viewModel.handleAction(.navigateToImage(indexPath.row))
     }
 }
-

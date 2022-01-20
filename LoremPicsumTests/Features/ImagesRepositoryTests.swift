@@ -1,6 +1,6 @@
-import XCTest
-@testable import LoremPicsum
 import Combine
+@testable import LoremPicsum
+import XCTest
 
 class ImagesRepositoryTests: XCTestCase {
     private var repository: ImagesRepository!
@@ -18,18 +18,18 @@ class ImagesRepositoryTests: XCTestCase {
         repository
             .loadImagesList(page: 0)
             .sink(receiveCompletion: { completion in
-                    switch completion {
-                    case .finished:
-                        break
-                    case .failure(let encounteredError):
-                        error = encounteredError
-                    }
+                switch completion {
+                case .finished:
+                    break
+                case let .failure(encounteredError):
+                    error = encounteredError
+                }
 
-                    expectation.fulfill()
-                        }, receiveValue: { value in
-                            images = value
-                        })
-                        .store(in: &bag)
+                expectation.fulfill()
+            }, receiveValue: { value in
+                images = value
+            })
+            .store(in: &bag)
         wait(for: [expectation], timeout: 10)
         XCTAssertNil(error)
         XCTAssert(images.count == 30, "There should be 30 images")
@@ -38,7 +38,7 @@ class ImagesRepositoryTests: XCTestCase {
 
 extension ImagesRepositoryTests {
     class FakeAPIClient: APIClientType {
-        func makeRequest<T>(path: String, query: [String : String]) -> AnyPublisher<T, APIError> where T : Decodable {
+        func makeRequest<T>(path _: String, query _: [String: String]) -> AnyPublisher<T, APIError> where T: Decodable {
             JSONLoader.loadJSON(named: "imagesList")
         }
     }

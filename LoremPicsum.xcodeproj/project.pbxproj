@@ -332,6 +332,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		7DF10D952798730E001EFB76 /* Build tools */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -346,7 +347,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "cd BuildTools\nSDKROOT=(xcrun --sdk macosx --show-sdk-path)\n#swift package update #Uncomment this line temporarily to update the version used to the latest matching your BuildTools/Package.swift file\n#swift build -c release #Uncomment this line temporarily after update\nswift run -c release swiftformat \"$SRCROOT\"\n.build/release/sourcery\n";
+			shellScript = "cd BuildTools\nSDKROOT=(xcrun --sdk macosx --show-sdk-path)\nswift package update #Uncomment this line temporarily to update the version used to the latest matching your BuildTools/Package.swift file\nswift run -c release swiftformat \"$SRCROOT\"\nsourcery\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

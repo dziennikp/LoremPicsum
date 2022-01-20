@@ -1,5 +1,5 @@
-import UIKit
 import SDWebImage
+import UIKit
 
 class ImageCell: UICollectionViewCell {
     private let imageView = UIImageView()
@@ -9,7 +9,8 @@ class ImageCell: UICollectionViewCell {
         setupViews()
     }
 
-    required init?(coder: NSCoder) {
+    @available(*, unavailable)
+    required init?(coder _: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
@@ -18,7 +19,7 @@ class ImageCell: UICollectionViewCell {
         let url = URL(string: image.download_url)
         let scale = UIScreen.main.scale
         let thumbnailSize = CGSize(width: 200 * scale, height: 200 * scale)
-        imageView.sd_setImage(with: url, placeholderImage: nil, context: [.imageThumbnailPixelSize : thumbnailSize])
+        imageView.sd_setImage(with: url, placeholderImage: nil, context: [.imageThumbnailPixelSize: thumbnailSize])
     }
 
     private func setupViews() {

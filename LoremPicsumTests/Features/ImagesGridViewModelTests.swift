@@ -1,6 +1,6 @@
-import XCTest
-@testable import LoremPicsum
 import Combine
+@testable import LoremPicsum
+import XCTest
 
 class ImagesGridViewModelTests: XCTestCase {
     private var repository = ImagesRepositoryTypeMock()
@@ -29,6 +29,7 @@ class ImagesGridViewModelTests: XCTestCase {
             XCTFail()
         }
     }
+
     func testLoadMoreActionError() {
         repository.loadImagesListPageClosure = { page in
             if page == 1 { return JSONLoader.loadJSON(named: "imagesList") }
@@ -84,7 +85,7 @@ class ImagesGridViewModelTests: XCTestCase {
         repository.loadImagesListPageReturnValue = JSONLoader.loadJSON(named: "imagesList")
         viewModel.handleAction(.initialLoad)
         let expectation = self.expectation(description: "navigate")
-        viewModel.navigateToImageDetails = { image in
+        viewModel.navigateToImageDetails = { _ in
             expectation.fulfill()
         }
         viewModel.handleAction(.navigateToImage(100))
@@ -115,5 +116,3 @@ class ImagesGridViewModelTests: XCTestCase {
         }
     }
 }
-
-

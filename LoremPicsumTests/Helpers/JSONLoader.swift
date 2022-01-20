@@ -1,6 +1,6 @@
+import Combine
 import Foundation
 @testable import LoremPicsum
-import Combine
 
 class JSONLoader {
     static func loadJSON<T: Decodable>(named: String) -> AnyPublisher<T, APIError> {
