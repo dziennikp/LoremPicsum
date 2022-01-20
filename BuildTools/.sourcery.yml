@@ -1,0 +1,7 @@
+sources:
+  - ../LoremPicsum
+templates:
+  - Templates/AutoMockable.stencil
+output: ../LoremPicsum/Generated
+args:
+  autoMockableImports: ["Combine"]
