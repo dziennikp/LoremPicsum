@@ -3,7 +3,9 @@ Simple UIKit based app for displaying grid of pictures from https://picsum.photo
 
 Available from iOS 13+.
 
-## Usage
+## Instalation
+
+Install Sourcery (https://github.com/krzysztofzablocki/Sourcery)
 
 Open LoremPicsum.xcodeproj and:  
 * cmd+r to run project
@@ -31,4 +33,5 @@ View is decoupled from ViewModel so we can easily switch between View frameworks
 * Setup Fastlane
 * Improve LaunchScreen
 * Improve caching
+* Restore Swiftformat
   
